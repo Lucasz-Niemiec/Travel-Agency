@@ -75,31 +75,41 @@ const Slider = () => {
   return (
     <MainConatiner>
       <SliderContainer ref={slider}>
-        {destinations.map((destination) => {
-          return (
-            <Slide
-              aria-label={`destination ${destination.destinationName}`}
-              tabIndex={0}
-              key={destination._id}
-            >
-              <Cards
-                name={destination.destinationName}
-                country={destination.country}
-                description={destination.description}
-                price={destination.price}
-                pack={destination.packageDescription}
-                imgurl={destination.imageurl}
-              ></Cards>
-            </Slide>
-          );
-        })}
+        {destinations.map(
+          ({
+            destinationName,
+            country,
+            description,
+            price,
+            packageDescription,
+            imageurl,
+            _id,
+          }) => {
+            return (
+              <Slide
+                aria-label={`destination ${destinationName}`}
+                tabIndex={0}
+                key={_id}
+              >
+                <Cards
+                  name={destinationName}
+                  country={country}
+                  description={description}
+                  price={price}
+                  pack={packageDescription}
+                  imgurl={imageurl}
+                  id={_id}
+                ></Cards>
+              </Slide>
+            );
+          }
+        )}
       </SliderContainer>
       <Controllers>
         <Button right onClick={next}>
           <Span right></Span>
         </Button>
         <Button onClick={previous}>
-          {" "}
           <Span></Span>
         </Button>
       </Controllers>
