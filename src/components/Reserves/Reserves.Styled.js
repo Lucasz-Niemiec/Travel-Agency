@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   min-height: 100vh;
-  border: none;
-  background-color: ${({ theme }) => theme.secondary};
+  width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.secondary};
 `;
 export const Content = styled.div`
-  padding: 5rem;
   width: 100%;
-  margin-top: 6rem;
+  height: 100%;
+  margin-top: 10rem;
+  text-align: center;
 `;
-export const Img = styled.img``;

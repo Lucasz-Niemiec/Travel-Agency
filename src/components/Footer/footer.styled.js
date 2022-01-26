@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 10vh;
   flex-direction: row;
-  box-shadow: 0px -5px 19px 20px #000;
+
   z-index: 2;
   margin-top: auto;
 `;

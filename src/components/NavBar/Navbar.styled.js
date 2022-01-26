@@ -1,4 +1,20 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-decoration: none;
+  :hover {
+    background-color: ${({ theme }) => theme.primary_variation};
+    opacity: 0.8;
+    border-radius: 0.2rem;
+    color: #000;
+  }
+`;
 
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.tertiary};
@@ -29,16 +45,4 @@ export const Li = styled.li`
   color: #fff;
   text-decoration: none;
   list-style: none;
-
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  :hover {
-    background-color: ${({ theme }) => theme.primary_variation};
-    opacity: 0.8;
-    border-radius: 0.2rem;
-    color: #000;
-  }
 `;

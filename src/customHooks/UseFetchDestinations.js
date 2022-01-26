@@ -13,7 +13,28 @@ export const useFecthDestinations = () => {
         const response = await fetch(API_URL);
         if (!response.ok) throw Error("Data base not respondig");
         const data = await response.json();
-        setDestinations(data);
+        setDestinations(
+          data.map((destination) => {
+            const {
+              _id,
+              country,
+              description,
+              destinationName,
+              imageurl,
+              packageDescription,
+              price,
+            } = destination;
+            return {
+              _id,
+              country,
+              description,
+              destinationName,
+              imageurl,
+              packageDescription,
+              price,
+            };
+          })
+        );
       } catch (err) {
         seFetchError(err.message);
       } finally {
@@ -22,5 +43,6 @@ export const useFecthDestinations = () => {
     };
     getData();
   }, []);
+
   return { destinations, fetchError, isLoading };
 };

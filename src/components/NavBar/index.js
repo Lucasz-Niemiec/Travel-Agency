@@ -1,7 +1,8 @@
 //
 //styles
-import { Wrapper, Nav, Ul, Li } from "./Navbar.styled";
+import { Wrapper, Nav, Ul, Li, StyledLink } from "./Navbar.styled";
 //
+
 //
 
 const Navbar = () => {
@@ -9,12 +10,18 @@ const Navbar = () => {
     <Wrapper>
       <Nav>
         <Ul>
-          <Li>item</Li>
-          <Li>item</Li>
-          <Li>item</Li>
-          <Li>item</Li>
-          <Li>item</Li>
-          <Li>item</Li>
+          <StyledLink to="/">
+            <Li>Home</Li>
+          </StyledLink>
+          <StyledLink to="/about">
+            <Li>About</Li>
+          </StyledLink>
+          <StyledLink to="/popular">
+            <Li>Popular dest</Li>
+          </StyledLink>
+          <StyledLink to="/reserves">
+            <Li>reservation</Li>
+          </StyledLink>
         </Ul>
       </Nav>
     </Wrapper>

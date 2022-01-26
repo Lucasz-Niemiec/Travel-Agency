@@ -1,7 +1,7 @@
 ///react
 
 ///styles
-import { Wrapper, Text, Content } from "./Populars.styled";
+import { Wrapper, Text } from "./Populars.styled";
 ///components
 import Slider from "../Slider";
 //

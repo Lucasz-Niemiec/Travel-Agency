@@ -3,25 +3,31 @@ import { useParams } from "react-router-dom";
 import { useFecthDestinations } from "../../customHooks/UseFetchDestinations";
 ///
 ///styles
-import { Wrapper, Content } from "./CardsInfo.styled";
+import { Wrapper, Content, Img } from "./CardsInfo.styled";
 ///
 
 const CardsInfo = () => {
   const { destinations, fetchError, isLoading } = useFecthDestinations();
+  let { id } = useParams();
 
   const sigleDestination = destinations.filter(
-    (destination) => destination._id === id
+    (destination) => destination._id == id
   );
-  const { id } = useParams();
-  console.log(sigleDestination);
-  const cardTitle = sigleDestination.map((el) => el.destinationName);
 
   return (
     <Wrapper>
-      <Content>
-        <p>asdasd</p>
-        <h1>asdkasdlkñ</h1>
-      </Content>
+      {sigleDestination.map((el) => (
+        <Content key={id}>
+          <Img src={sigleDestination[0].imageurl} />
+          <h1>{sigleDestination[0].destinationName}</h1>
+          <h2>{sigleDestination[0].country}</h2>
+          <p>{sigleDestination[0].description}</p>
+          <p>
+            <b>{sigleDestination[0].packageDescription}</b>
+          </p>
+          <p>${sigleDestination[0].price}</p>
+        </Content>
+      ))}
     </Wrapper>
   );
 };
