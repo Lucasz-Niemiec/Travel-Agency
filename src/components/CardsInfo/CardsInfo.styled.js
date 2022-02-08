@@ -33,16 +33,27 @@ export const Content = styled.div`
     ;
   }
   p{margin:0.5rem;}
+  @media screen and (max-width:900px){
+
+
+    flex-direction:column ;
+  }
 `;
 export const TextContent = styled.div`
   width: 50%;
   height: 50%;
   background: ${({ theme }) => theme.primary_variation};
   box-shadow: -2px 5px 5px #1d1f1e;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;
 export const Img = styled.img`
   margin-right: 0.5rem;
   box-shadow: -2px 5px 5px #1d1f1e;
   object-fit: cover;
   width: 70%;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;

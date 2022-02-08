@@ -54,6 +54,16 @@ export const MenuToggle = styled.a`
       position: absolute;
     }
   }
+  @media screen and (max-width: 400px) {
+    visibility: visible;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 5px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -68,7 +78,7 @@ export const Wrapper = styled.div`
   z-index: 1;
   @media screen and (max-width: 1100px) {
     width: 90%;
-    height: 6%;
+    height: 8%;
     margin: 1rem;
     left: 0;
     right: 0;
@@ -78,7 +88,13 @@ export const Wrapper = styled.div`
     ${Transition}
     &.open {
       height: 90%;
+      width: 90%;
     }
+  }
+  @media screen and (max-width: 400px) {
+    padding-top: 2rem;
+    width: 40px;
+    height: 40px;
   }
 `;
 export const Nav = styled.nav`
@@ -133,8 +149,22 @@ export const Logo = styled.p`
   span {
     color: #5958d2;
   }
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
   @media screen and (max-width: 1100px) {
     width: 90%;
     height: 10%;
+  }
+  @media screen and (max-width: 400px) {
+    opacity: 0;
+    visibility: hidden;
+    font-size: 1.5rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
   }
 `;

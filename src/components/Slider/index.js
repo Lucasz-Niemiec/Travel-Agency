@@ -129,7 +129,7 @@ const Slider = () => {
           tabIndex={0}
         >
           <Span></Span>
-        </Button>{" "}
+        </Button>
         {isLoading && <Loading />}
         {fetchError && <Error />}
       </Controllers>

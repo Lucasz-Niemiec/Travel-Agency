@@ -24,6 +24,14 @@ export const Wrapper = styled.div`
     box-shadow: -2px 2px 5px 2px ${({ theme }) => theme.tertiary};
     transform: scale(1.025);
   }
+  @media screen and (max-width: 1100px) {
+    font-size: 10px;
+    width: 100%;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 10px;
+    height: 20rem;
+  }
 `;
 
 export const CalendarContainer = styled.div`
@@ -40,6 +48,10 @@ export const CalendarContainer = styled.div`
     color: ${({ theme }) => theme.primary};
     box-shadow: -3px 0px 10px ${({ theme }) => theme.tertiary};
   }
+  @media screen and (max-width: 1100px) {
+    font-size: 10px;
+    width: 100%;
+  }
 `;
 
 export const DayNameConatainer = styled.div`
@@ -48,13 +60,24 @@ export const DayNameConatainer = styled.div`
   background-color: ${({ theme }) => theme.primary_variation};
   font-family: ${({ theme }) => theme.titles};
   box-shadow: -3px 0px 10px ${({ theme }) => theme.tertiary};
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 export const DayNames = styled.div`
   color: ${({ theme }) => theme.tertiary};
-  width: 100%;
+  width: 90%;
   height: 3rem;
   padding: 0.5rem;
-  font-size: 1.4rem; ;
+  font-size: ${({ theme }) => theme.text_small};
+  @media screen and (max-width: 1100px) {
+    font-size: ${({ theme }) => theme.text_cards};
+    width: 90%;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 10px;
+    width: 100%;
+  }
 `;
 
 export const Week = styled.div`
@@ -63,6 +86,14 @@ export const Week = styled.div`
   display: flex;
   width: 100%;
   height: 5rem;
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+    height: 40px;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 10px;
+    height: 30px;
+  }
 `;
 
 export const Day = styled.div`
@@ -89,6 +120,14 @@ export const Day = styled.div`
     color: ${({ theme }) => theme.primary};
     opacity: 0.9;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+    height: 40px;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 10px;
+    height: 30px;
+  }
 `;
 export const Button = styled.button`
   border: none;
@@ -96,5 +135,5 @@ export const Button = styled.button`
   ${SliderButtons};
 `;
 export const Span = styled.span`
-  ${Arrows}
+  ${Arrows};
 `;

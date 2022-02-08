@@ -11,6 +11,9 @@ export const MainConatiner = styled.div`
   margin: auto;
   width: 80%;
   position: relative;
+  @media screen and (max-width: 520px) {
+    width: 100%;
+  }
 `;
 export const SliderContainer = styled.div`
   width: 100%;
@@ -21,6 +24,15 @@ export const SliderContainer = styled.div`
   justify-content: flex-start;
   flex-wrap: nowrap;
   overflow: hidden;
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  @media screen and (max-width: 520px) {
+    width: 100%;
+  }
 `;
 export const Slide = styled.div`
   margin: 0 40px;
@@ -28,14 +40,27 @@ export const Slide = styled.div`
   height: 500px;
   transform: translateX(50px);
   box-shadow: -2px 5px 5px #1d1f1e;
+  @media screen and (max-width: 820px) {
+    margin: 0.5rem auto;
+    max-width: 100px;
+    height: 400px;
+    transform: translateX(0px);
+  }
+  @media screen and (max-width: 520px) {
+    min-width: 90%;
+  }
 `;
 export const Controllers = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
+
   pointer-events: none;
   height: 100%;
   opacity: 1;
+  @media screen and (max-width: 820px) {
+    visibility: hidden;
+  }
 `;
 export const Button = styled.div`
   ${SliderButtons}

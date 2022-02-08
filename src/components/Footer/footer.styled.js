@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import {
   contactIcons,
-  emmailAnim,
+  emmailAnimIn,
   Transition,
-  emmailAnim2,
+  emmailAnimOut,
 } from "../../themeAndGlobalStyles/ThemeProvider";
 
 import Facebook from "../icons/Facebook";
@@ -27,15 +27,14 @@ export const SvgContainer = styled.div`
   width: 50%;
   height: 100%;
   margin: auto;
+
   a {
     width: 50px;
     height: 50px;
     text-decoration: none;
     color: white;
-    ${Transition}
     div {
       text-align: center;
-      ${Transition}
       position: relative;
       span {
         color: white;
@@ -44,13 +43,19 @@ export const SvgContainer = styled.div`
         top: 10px;
         right: 10px;
         opacity: 0;
-        animation: ${emmailAnim2} 300ms linear forwards;
+        animation: ${emmailAnimOut} 300ms linear forwards;
         font-family: ${({ theme }) => theme.text};
         font-weight: 900;
+        @media screen and (max-width: 800px) {
+          animation: none;
+        }
       }
       :hover {
         span {
-          animation: ${emmailAnim} 300ms linear forwards;
+          animation: ${emmailAnimIn} 300ms linear forwards;
+          @media screen and (max-width: 800px) {
+            animation: none;
+          }
         }
       }
     }

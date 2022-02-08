@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <Wrapper className={`${isOpen && "open"} `}>
         <MenuToggle onClick={open} />
-        <Logo>
+        <Logo className={`${isOpen && "open"} `}>
           <span>T</span>rvael<span>W</span>orld
         </Logo>
         <Nav className={`${isOpen && "open"} `}>

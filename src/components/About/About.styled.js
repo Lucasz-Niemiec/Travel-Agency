@@ -30,6 +30,11 @@ export const Content = styled.div`
     font-size: ${({ theme }) => theme.text_small};
     line-height: 1.5;
   }
+  @media screen and (max-width: 810px) {
+    p {
+      font-size: ${({ theme }) => theme.text_cards};
+    }
+  }
 `;
 
 export const SvgContainer = styled.div`

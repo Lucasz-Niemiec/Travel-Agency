@@ -41,4 +41,7 @@ export const Bg = styled.div`
   width: 90%;
   height: 20rem;
   filter: blur(3px);
+  @media screen and (max-width: 500px) {
+    background-size: 200%;
+  }
 `;

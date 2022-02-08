@@ -1,6 +1,6 @@
 import { ThemeProvider, css, keyframes } from "styled-components";
 
-export const emmailAnim2 = keyframes`
+export const emmailAnimOut = keyframes`
 from{left:50px;
         opacity: 1;
  
@@ -11,7 +11,7 @@ from{left:50px;
 
 
 `;
-export const emmailAnim = keyframes`
+export const emmailAnimIn = keyframes`
 from{
   left: 10px;
         opacity: 0;
@@ -55,6 +55,9 @@ export const SliderButtons = css`
   justify-content: center;
   top: 0;
   outline: none;
+  @media screen and (max-width: 1100px) {
+    height: 10%;
+  }
 
   &:hover {
     background: ${({ theme }) => theme.primary_variation};
@@ -98,6 +101,10 @@ export const contactIcons = css`
     opacity: 0.9;
 
     fill: ${({ theme }) => theme.tertiary};
+  }
+  @media screen and (max-width: 500px) {
+    width: 30px;
+    height: 30px;
   }
 `;
 
