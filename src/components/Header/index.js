@@ -3,6 +3,7 @@ import { useState } from "react";
 //styles
 import { Wrapper, Content, Img, Div } from "./Header.styled";
 //
+import Welcome from "../Welcome";
 import img1 from "../../images/nature-6567542_1280.jpg";
 import img2 from "../../images/boat-6561172_1920.jpg";
 import img3 from "../../images/hiker-1149877_1280.jpg";
@@ -18,6 +19,7 @@ const Header = () => {
   return (
     <>
       <Wrapper>
+        <Welcome />
         <Content>
           <Div onMouseEnter={() => imageChanger(img1)} />
           <Div onMouseEnter={() => imageChanger(img2)} />

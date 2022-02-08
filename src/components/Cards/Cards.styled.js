@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.tertiary};
+`;
 
 export const Wrapper = styled.article`
   background-color: ${({ theme }) => theme.primary};
@@ -27,6 +33,15 @@ export const Wrapper = styled.article`
       opacity: 1;
     }
   }
+  &:focus-within {
+    :after {
+      top: 0;
+      opacity: 0.8;
+    }
+    p {
+      opacity: 1;
+    }
+  }
 `;
 export const Content = styled.div`
   width: 100%;
@@ -39,6 +54,7 @@ export const Content = styled.div`
 `;
 export const H2 = styled.h2`
   align-self: center;
+  font-family: ${({ theme }) => theme.logo};
 `;
 export const KnowMore = styled.p`
   opacity: 0;
@@ -52,6 +68,8 @@ export const KnowMore = styled.p`
   text-align: center;
   z-index: 2;
   transition: all 0.5s ease-in-out;
+  font-size: ${({ theme }) => theme.text_medium};
+  font-family: ${({ theme }) => theme.logo};
 `;
 export const TextContainer = styled.div`
   height: 36%;
@@ -59,23 +77,30 @@ export const TextContainer = styled.div`
   text-align: left;
 `;
 export const H3 = styled.h3`
-  padding: 0%.5rem;
+  padding: 0.5rem;
   margin: 5px 0;
+  font-family: ${({ theme }) => theme.titles};
 `;
 export const Text = styled.p`
   font-size: 0.9rem;
-  word-spacing: 0px;
+  word-spacing: 1px;
   padding: 0 0.5rem 2rem 0.5rem;
+  font-family: ${({ theme }) => theme.text};
+  color: black;
+  line-height: 1.2;
+  font-size: ${({ theme }) => theme.text_cards};
+  margin-top: 10px;
 `;
 export const Pack = styled.p`
-  color: yellow;
-  position: absolute;
-  bottom: 0.4rem;
+  color: black;
   left: 0.5rem;
+  font-family: ${({ theme }) => theme.titles};
+  margin: 0%.5rem;
+  display: inline-block;
 `;
 export const Number = styled.p`
-  color: white;
-  position: absolute;
-  bottom: 0.4rem;
+  color: black;
+  display: inline-block;
   right: 0.5rem;
+  font-family: ${({ theme }) => theme.titles};
 `;

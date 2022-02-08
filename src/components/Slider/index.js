@@ -3,6 +3,8 @@ import { useRef, useEffect } from "react";
 import { useFecthDestinations } from "../../customHooks/UseFetchDestinations";
 //components
 import Cards from "../Cards";
+import Loading from "../Loading";
+import Error from "../Error";
 //styles
 import {
   MainConatiner,
@@ -72,6 +74,17 @@ const Slider = () => {
       }
     }
   };
+  const handleEnterNext = (event) => {
+    if (event.keyCode === 13 || event.which === 13) {
+      next();
+    }
+  };
+  const handleEnterPrevious = (event) => {
+    if (event.keyCode === 13 || event.which === 13) {
+      previous();
+    }
+  };
+
   return (
     <MainConatiner>
       <SliderContainer ref={slider}>
@@ -86,11 +99,7 @@ const Slider = () => {
             _id,
           }) => {
             return (
-              <Slide
-                aria-label={`destination ${destinationName}`}
-                tabIndex={0}
-                key={_id}
-              >
+              <Slide aria-label={`destination ${destinationName}`} key={_id}>
                 <Cards
                   name={destinationName}
                   country={country}
@@ -106,12 +115,23 @@ const Slider = () => {
         )}
       </SliderContainer>
       <Controllers>
-        <Button right onClick={next}>
+        <Button
+          right
+          onKeyPress={handleEnterNext}
+          onClick={() => next()}
+          tabIndex={0}
+        >
           <Span right></Span>
         </Button>
-        <Button onClick={previous}>
+        <Button
+          onKeyPress={handleEnterPrevious}
+          onClick={() => previous()}
+          tabIndex={0}
+        >
           <Span></Span>
-        </Button>
+        </Button>{" "}
+        {isLoading && <Loading />}
+        {fetchError && <Error />}
       </Controllers>
     </MainConatiner>
   );

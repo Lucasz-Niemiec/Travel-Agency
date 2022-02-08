@@ -1,7 +1,7 @@
 //react
 //styles
 import { GlobalStyle } from "./GlobalStyles";
-import Theme from "./themeAndGlobalStyles/ThemeProvdes";
+import Theme from "./themeAndGlobalStyles/ThemeProvider";
 //components
 import Navbar from "./components/NavBar";
 import Header from "./components/Header";
@@ -17,8 +17,8 @@ import Reserves from "./components/Reserves";
 function App() {
   return (
     <Theme>
+      <GlobalStyle />
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="/about" element={<About />} />
@@ -26,7 +26,6 @@ function App() {
         <Route path="/popular/:id" element={<CardsInfo />} />
         <Route path="/reserves" element={<Reserves />} />
       </Routes>
-      <GlobalStyle />
       <Footer />
     </Theme>
   );

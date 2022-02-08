@@ -9,12 +9,20 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 export const Text = styled.div`
-  margin-top: 5rem;
+  margin-top: 10rem;
   text-align: left;
+  font-family: ${({ theme }) => theme.text};
+  font-size: 1.5rem;
+  text-align: center;
+  h1 {
+    font-family: ${({ theme }) => theme.titles};
+    font-size: ${({ theme }) => theme.text_medium};
+    margin-bottom: 0.5rem;
+    color: ${({ theme }) => theme.tertiary};
+  }
+  p {
+    font-family: ${({ theme }) => theme.text};
+    font-size: ${({ theme }) => theme.text_small};
+  }
 `;

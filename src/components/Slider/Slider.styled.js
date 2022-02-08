@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import {
+  Arrows,
+  SliderButtons,
+} from "../../themeAndGlobalStyles/ThemeProvider";
 export const MainConatiner = styled.div`
   margin: auto;
   display: flex;
@@ -15,7 +19,6 @@ export const SliderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-
   flex-wrap: nowrap;
   overflow: hidden;
 `;
@@ -24,12 +27,7 @@ export const Slide = styled.div`
   min-width: 400px;
   height: 500px;
   transform: translateX(50px);
-  &:focus {
-    padding: 0.5rem;
-    background-color: blue;
-    opacity: 0.5;
-    outline: solid 1px blue;
-  }
+  box-shadow: -2px 5px 5px #1d1f1e;
 `;
 export const Controllers = styled.div`
   position: absolute;
@@ -40,36 +38,8 @@ export const Controllers = styled.div`
   opacity: 1;
 `;
 export const Button = styled.div`
-  margin: 0%;
-  background-color: transparent;
-  pointer-events: all;
-  position: absolute;
-  cursor: pointer;
-  height: 100%;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    background: ${({ theme }) => theme.primary_variation};
-    opacity: 0.8;
-    span {
-      border-top: solid white 6px;
-      border-right: solid white 6px;
-    }
-  }
-  &:focus {
-    background: black;
-    opacity: 0.8;
-  }
-
-  ${(props) => (props.right ? "right:0" : "left:0")}
+  ${SliderButtons}
 `;
 export const Span = styled.span`
-  width: 20px;
-  height: 20px;
-  border-top: solid 6px black;
-  border-right: solid 6px black;
-  transform: ${(props) => (props.right ? "rotate(45deg)" : "rotate(-135deg)")};
+  ${Arrows}
 `;

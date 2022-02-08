@@ -1,5 +1,5 @@
 ///react
-import { Link } from "react-router-dom";
+
 ///styles
 import {
   Wrapper,
@@ -11,29 +11,29 @@ import {
   Pack,
   TextContainer,
   KnowMore,
+  StyledLink,
 } from "./Cards.styled";
 ///
 ///
 
 const Cards = ({ name, country, description, price, pack, imgurl, id }) => {
   return (
-    <Link to={id}>
-      <Wrapper>
+    <Wrapper tabIndex={2}>
+      <StyledLink to={id}>
         <KnowMore> Read More</KnowMore>
         <Content src={imgurl}>
           <H2>{name}</H2>
         </Content>
-        <H3>{country}</H3>
-        <TextContainer>
-          <Text>{description}</Text>
-        </TextContainer>
-        <Number>
-          <span>$</span>
-          {price}
-        </Number>
-        <Pack>{pack}</Pack>
-      </Wrapper>
-    </Link>
+      </StyledLink>
+      <H3>{country}</H3> <Pack>{pack}</Pack>
+      <Number>
+        From <span>$</span>
+        {price}
+      </Number>
+      <TextContainer>
+        <Text>{description}</Text>
+      </TextContainer>
+    </Wrapper>
   );
 };
 export default Cards;
