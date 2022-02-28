@@ -28,6 +28,7 @@ export const StyledLink = styled(Link)`
 `;
 export const MenuToggle = styled.a`
   visibility: hidden;
+  margin: 10px;
 
   @media screen and (max-width: 1100px) {
     visibility: visible;
@@ -86,6 +87,7 @@ export const Wrapper = styled.div`
     margin-right: auto;
     flex-direction: column;
     ${Transition}
+    padding: 0.5rem;
     &.open {
       height: 90%;
       width: 90%;
