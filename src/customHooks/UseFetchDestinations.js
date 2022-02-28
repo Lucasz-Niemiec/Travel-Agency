@@ -42,7 +42,7 @@ export const useFecthDestinations = () => {
       }
     };
     getData();
-  }, []);
+  }, [API_URL]);
 
   return { destinations, fetchError, isLoading };
 };
