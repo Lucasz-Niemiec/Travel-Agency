@@ -51,11 +51,13 @@ export const SvgContainer = styled.div`
     margin: 0 0.5rem;
 
     h3 {
+      font-size: ${({ theme }) => theme.text_medium};
       font-family: ${({ theme }) => theme.titles};
       color: ${({ theme }) => theme.tertiary};
       margin: 1rem 0;
     }
     p {
+      font-size: ${({ theme }) => theme.text_small};
       font-family: ${({ theme }) => theme.text};
       text-align: center;
       margin: 2.5rem 0;

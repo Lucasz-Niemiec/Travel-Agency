@@ -46,9 +46,12 @@ export const Wrapper = styled.article`
 export const Content = styled.div`
   width: 100%;
   height: 50%;
+
   display: flex;
   flex-direction: column;
   background: url(${(props) => props.src}) no-repeat;
+  background-size: cover;
+
   padding: 0.5rem;
   overflow: hidden;
 `;
@@ -97,6 +100,7 @@ export const Pack = styled.p`
   font-family: ${({ theme }) => theme.titles};
   margin: 0%.5rem;
   display: inline-block;
+  font-size: ${({ theme }) => theme.text_small};
 `;
 export const Number = styled.p`
   color: black;

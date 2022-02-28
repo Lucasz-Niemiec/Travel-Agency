@@ -142,10 +142,10 @@ const theme = {
   text: "'Lato'",
   text_logo: "5rem",
   text_Extralarge: "4rem",
-  text_large: "40px",
-  text_medium: "2rem",
-  text_small: "1.3rem",
-  text_cards: "1rem",
+  text_large: "6rem",
+  text_medium: "4rem",
+  text_small: "2.5rem",
+  text_cards: "2rem",
 };
 
 const Theme = ({ children }) => (

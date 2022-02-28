@@ -4,19 +4,20 @@ import {
   SliderButtons,
 } from "../../themeAndGlobalStyles/ThemeProvider";
 export const MainConatiner = styled.div`
-  margin: auto;
-  display: flex;
-  align-items: center;
   padding: 0.9rem 0;
   margin: auto;
   width: 80%;
+  height: 50rem;
   position: relative;
+  background-color: aliceblue;
   @media screen and (max-width: 520px) {
     width: 100%;
   }
 `;
 export const SliderContainer = styled.div`
   width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -24,6 +25,7 @@ export const SliderContainer = styled.div`
   justify-content: flex-start;
   flex-wrap: nowrap;
   overflow: hidden;
+  position: relative;
   @media screen and (max-width: 820px) {
     flex-direction: column;
     align-items: center;
@@ -36,8 +38,8 @@ export const SliderContainer = styled.div`
 `;
 export const Slide = styled.div`
   margin: 0 40px;
-  min-width: 400px;
-  height: 500px;
+  min-width: 700px;
+  height: 100%;
   transform: translateX(50px);
   box-shadow: -2px 5px 5px #1d1f1e;
   @media screen and (max-width: 820px) {
