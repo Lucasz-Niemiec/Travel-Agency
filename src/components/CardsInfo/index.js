@@ -13,7 +13,7 @@ const CardsInfo = () => {
   let { id } = useParams();
 
   const sigleDestination = destinations.filter(
-    (destination) => destination._id == id
+    (destination) => destination._id === id
   );
 
   return (

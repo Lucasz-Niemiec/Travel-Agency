@@ -10,8 +10,6 @@ import {
   SvgContainer,
 } from "./About.styled";
 
-//componetnts
-import Plane from "../icons/Plane";
 //
 const About = () => {
   return (

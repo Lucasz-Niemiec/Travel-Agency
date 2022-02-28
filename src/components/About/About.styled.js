@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Transition, svg } from "../../themeAndGlobalStyles/ThemeProvider";
+import { svg } from "../../themeAndGlobalStyles/ThemeProvider";
 import Plane from "../icons/Plane";
 import Lugage from "../icons/Lugage";
 import Bed from "../icons/Bed";
@@ -21,7 +21,7 @@ export const Content = styled.div`
   h1 {
     font-family: ${({ theme }) => theme.titles};
     margin: 1rem;
-    font-size: ${({ theme }) => theme.text_medium};
+    font-size: ${({ theme }) => theme.text_large};
     color: ${({ theme }) => theme.tertiary};
   }
   p {

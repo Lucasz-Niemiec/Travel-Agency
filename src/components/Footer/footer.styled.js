@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {
   contactIcons,
   emmailAnimIn,
-  Transition,
   emmailAnimOut,
 } from "../../themeAndGlobalStyles/ThemeProvider";
 
