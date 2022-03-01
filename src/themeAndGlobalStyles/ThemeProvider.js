@@ -109,16 +109,14 @@ export const contactIcons = css`
 `;
 
 export const svg = css`
-  scale: 8;
+  width: 200px;
+  height: 200px;
   fill: ${({ theme }) => theme.tertiary};
   padding: 2px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   display: inline-block;
-  width: 5%;
   ${Transition};
-  margin: 50px;
-  width: 50;
-
+  padding: 1rem;
   :hover {
     background-color: ${({ theme }) => theme.tertiary};
     opacity: 0.9;
@@ -126,9 +124,6 @@ export const svg = css`
     fill: ${({ theme }) => theme.primary};
   }
   @media screen and (max-width: 1300px) {
-    margin: 60px;
-    height: 1rem;
-    width: 1rem;
   }
 `;
 
