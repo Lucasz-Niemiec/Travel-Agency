@@ -111,12 +111,12 @@ export const contactIcons = css`
 export const svg = css`
   scale: 8;
   fill: ${({ theme }) => theme.tertiary};
-  padding: 3px;
+  padding: 2px;
   border-radius: 0.2rem;
   display: inline-block;
   width: 5%;
   ${Transition};
-  margin: 100px;
+  margin: 50px;
 
   :hover {
     background-color: ${({ theme }) => theme.tertiary};
@@ -125,9 +125,9 @@ export const svg = css`
     fill: ${({ theme }) => theme.primary};
   }
   @media screen and (max-width: 1300px) {
-    margin: 100px;
-    height: 2rem;
-    width: 2rem;
+    margin: 60px;
+    height: 1rem;
+    width: 1rem;
   }
 `;
 
@@ -143,11 +143,10 @@ const theme = {
   titles: "'Inter'",
   text: "'Lato'",
   text_logo: "5rem",
-  text_Extralarge: "6rem",
-  text_large: "4rem",
-  text_medium: "3rem",
-  text_small: "2.5rem",
-  text_cards: "2rem",
+  text_large: "3rem",
+  text_medium: "2rem",
+  text_small: "1.5rem",
+  text_cards: "1rem",
 };
 
 const Theme = ({ children }) => (

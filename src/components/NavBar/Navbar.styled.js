@@ -28,7 +28,7 @@ export const StyledLink = styled(Link)`
 `;
 export const MenuToggle = styled.a`
   visibility: hidden;
-  margin: 10px;
+  margin: 2px;
 
   @media screen and (max-width: 1100px) {
     visibility: visible;
@@ -112,7 +112,6 @@ export const Nav = styled.nav`
     margin-right: auto;
     visibility: hidden;
     opacity: 0;
-    ${Transition}
 
     &.open {
       visibility: visible;
@@ -143,9 +142,8 @@ export const Li = styled.li`
 `;
 export const Logo = styled.p`
   color: #fff;
-  font-size: ${({ theme }) => theme.text_large};
+  font-size: ${({ theme }) => theme.text_logo};
   justify-self: flex-start;
-  margin-left: 1rem;
 
   font-family: ${({ theme }) => theme.logo};
   span {
@@ -155,9 +153,14 @@ export const Logo = styled.p`
     visibility: visible;
     opacity: 1;
   }
+  @media screen and (max-width: 1500px) {
+    font-size: ${({ theme }) => theme.text_large};
+    width: 50%;
+  }
   @media screen and (max-width: 1100px) {
     width: 90%;
-    height: 10%;
+    height: 5%;
+    font-size: ${({ theme }) => theme.text_medium};
   }
   @media screen and (max-width: 400px) {
     opacity: 0;

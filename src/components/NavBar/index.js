@@ -19,7 +19,9 @@ const Navbar = () => {
 
   const open = () => {
     setIsOpen(!isOpen);
-    console.log("OPEN");
+  };
+  const close = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -31,16 +33,16 @@ const Navbar = () => {
         </Logo>
         <Nav className={`${isOpen && "open"} `}>
           <Ul>
-            <StyledLink to="/" onClick={open}>
+            <StyledLink to="/" onClick={close}>
               <Li>Home</Li>
             </StyledLink>
-            <StyledLink to="/about" onClick={open}>
+            <StyledLink to="/about" onClick={close}>
               <Li>About</Li>
             </StyledLink>
-            <StyledLink to="/popular" onClick={open}>
+            <StyledLink to="/popular" onClick={close}>
               <Li>Popular</Li>
             </StyledLink>
-            <StyledLink to="/reserves" onClick={open}>
+            <StyledLink to="/reserves" onClick={close}>
               <Li>reservation</Li>
             </StyledLink>
           </Ul>

@@ -42,14 +42,15 @@ export const SvgContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 10rem auto;
-  width: 90%;
-  height: 10%;
+  width: 100%;
+  height: 90%;
   flex-wrap: wrap;
 
   div {
     text-align: center;
-    width: 30%;
-    margin: 2.5rem 2.5rem;
+    width: 20%;
+
+    margin: 1rem 2.5rem;
     border: solid ${({ theme }) => theme.tertiary} 5px;
     border-radius: 5rem;
 
@@ -63,20 +64,34 @@ export const SvgContainer = styled.div`
       font-size: ${({ theme }) => theme.text_small};
       font-family: ${({ theme }) => theme.text};
       text-align: left;
-      margin: 2.5rem 0;
-      padding: 2rem;
+      margin: 1rem 0;
+      padding: 1.5rem;
     }
   }
   @media screen and (max-width: 1500px) {
+    width: 90%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     div {
-      width: 50%;
+      width: 30%;
     }
   }
   @media screen and (max-width: 1100px) {
+    width: 70%;
+    div {
+      width: 30%;
+      h3 {
+        font-size: ${({ theme }) => theme.text_samll};
+      }
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
     div {
       width: 90%;
+      height: 50%;
+      margin: 1rem auto;
     }
   }
 `;

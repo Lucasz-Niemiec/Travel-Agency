@@ -46,19 +46,16 @@ export const Wrapper = styled.article`
 export const Content = styled.div`
   width: 100%;
   height: 50%;
-
   display: flex;
   flex-direction: column;
   background: url(${(props) => props.src}) no-repeat;
   background-size: cover;
-
   padding: 0.5rem;
   overflow: hidden;
 `;
 export const H2 = styled.h2`
   align-self: center;
   font-family: ${({ theme }) => theme.logo};
-  font-size: ${({ theme }) => theme.text_medium};
 `;
 export const KnowMore = styled.p`
   opacity: 0;
@@ -84,7 +81,6 @@ export const H3 = styled.h3`
   padding: 0.5rem;
   margin: 5px 0;
   font-family: ${({ theme }) => theme.titles};
-  font-size: ${({ theme }) => theme.text_small};
 `;
 export const Text = styled.p`
   font-size: 0.9rem;
@@ -102,13 +98,11 @@ export const Pack = styled.p`
   font-family: ${({ theme }) => theme.titles};
   margin: 0%.5rem;
   display: inline-block;
-  font-size: ${({ theme }) => theme.text_cards};
+  font-size: ${({ theme }) => theme.text_small};
 `;
 export const Number = styled.p`
   color: black;
   display: inline-block;
   right: 0.5rem;
-  margin: 10px;
   font-family: ${({ theme }) => theme.titles};
-  font-size: ${({ theme }) => theme.text_cards};
 `;

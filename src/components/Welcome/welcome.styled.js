@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   h1 {
     animation: ${h1Anim} 500ms linear forwards;
     font-family: ${({ theme }) => theme.logo};
-    font-size: 8rem;
+    font-size: ${({ theme }) => theme.text_logo};
     color: ${({ theme }) => theme.tertiary};
     text-shadow: 2px 2px ${({ theme }) => theme.primary};
     span {
