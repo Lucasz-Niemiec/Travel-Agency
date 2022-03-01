@@ -1,5 +1,5 @@
 //use
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useFecthDestinations } from "../../customHooks/UseFetchDestinations";
 //components
 import Cards from "../Cards";

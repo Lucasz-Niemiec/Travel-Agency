@@ -1,4 +1,4 @@
-import { takeMonth } from "../../helpers/calendar";
+import { takeMonth } from "../../helpers/calendarFunctionality";
 import { useState } from "react";
 import {
   format,
@@ -8,7 +8,6 @@ import {
   startOfMonth,
   addDays,
   subDays,
-  toDate,
 } from "date-fns";
 import {
   DayNames,

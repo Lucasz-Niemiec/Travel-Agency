@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Transition, svg } from "../../themeAndGlobalStyles/ThemeProvider";
+import { svg } from "../../themeAndGlobalStyles/ThemeProvider";
 import Plane from "../icons/Plane";
 import Lugage from "../icons/Lugage";
 import Bed from "../icons/Bed";
@@ -21,7 +21,7 @@ export const Content = styled.div`
   h1 {
     font-family: ${({ theme }) => theme.titles};
     margin: 1rem;
-    font-size: ${({ theme }) => theme.text_medium};
+    font-size: ${({ theme }) => theme.text_large};
     color: ${({ theme }) => theme.tertiary};
   }
   p {
@@ -40,30 +40,44 @@ export const Content = styled.div`
 export const SvgContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 3rem 0;
-  width: 70%;
+  justify-content: center;
+  margin: 10rem auto;
+  width: 90%;
   height: 10%;
+  flex-wrap: wrap;
 
   div {
     text-align: center;
-    width: 90%;
-    margin: 0 0.5rem;
+    width: 30%;
+    margin: 2.5rem 2.5rem;
+    border: solid ${({ theme }) => theme.tertiary} 5px;
+    border-radius: 5rem;
 
     h3 {
+      font-size: ${({ theme }) => theme.text_medium};
       font-family: ${({ theme }) => theme.titles};
       color: ${({ theme }) => theme.tertiary};
       margin: 1rem 0;
     }
     p {
+      font-size: ${({ theme }) => theme.text_small};
       font-family: ${({ theme }) => theme.text};
-      text-align: center;
+      text-align: left;
       margin: 2.5rem 0;
+      padding: 2rem;
     }
   }
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 1500px) {
     flex-direction: column;
     align-items: center;
+    div {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    div {
+      width: 90%;
+    }
   }
 `;
 

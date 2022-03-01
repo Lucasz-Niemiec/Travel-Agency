@@ -111,21 +111,23 @@ export const contactIcons = css`
 export const svg = css`
   scale: 8;
   fill: ${({ theme }) => theme.tertiary};
-  margin: 100px;
-  padding: 2px;
+  padding: 3px;
   border-radius: 0.2rem;
   display: inline-block;
-  width: 10%;
+  width: 5%;
   ${Transition};
+  margin: 100px;
+
   :hover {
     background-color: ${({ theme }) => theme.tertiary};
     opacity: 0.9;
 
     fill: ${({ theme }) => theme.primary};
   }
-  @media screen and (max-width: 1100px) {
-    margin: 50px;
-    height: 4%;
+  @media screen and (max-width: 1300px) {
+    margin: 100px;
+    height: 2rem;
+    width: 2rem;
   }
 `;
 
@@ -140,10 +142,12 @@ const theme = {
   logo: "'Permanent Marker'",
   titles: "'Inter'",
   text: "'Lato'",
-  text_large: "2.5rem",
-  text_medium: "2rem",
-  text_small: "1.3rem",
-  text_cards: "1rem",
+  text_logo: "5rem",
+  text_Extralarge: "6rem",
+  text_large: "4rem",
+  text_medium: "3rem",
+  text_small: "2.5rem",
+  text_cards: "2rem",
 };
 
 const Theme = ({ children }) => (

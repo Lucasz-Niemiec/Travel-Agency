@@ -10,25 +10,25 @@ const Footer = () => {
   return (
     <Wrapper>
       <SvgContainer>
-        <a href="#">
+        <button>
           <div>
             <FacebookIcon />
             <span>Follow us</span>
           </div>
-        </a>
-        <a href="#">
+        </button>
+        <button>
           <div>
             <InstaIcon />
             <span>Follow us</span>
           </div>
-        </a>
+        </button>
 
-        <a href="#">
+        <button>
           <div>
             <EmailIcon />
             <span>Email us</span>
           </div>
-        </a>
+        </button>
       </SvgContainer>
     </Wrapper>
   );

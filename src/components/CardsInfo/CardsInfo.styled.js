@@ -17,7 +17,7 @@ export const Content = styled.div`
   font-size: ${({ theme }) => theme.text_small};
   display: flex;
 
-  flex-direction:row;
+  flex-direction: row;
 
   h1 {
     font-family: ${({ theme }) => theme.logo};
@@ -26,17 +26,16 @@ export const Content = styled.div`
     margin: 0.5rem;
   }
   h2 {
-    font-size: ${({ theme }) => theme.text_medium}
+    font-size: ${({ theme }) => theme.text_medium};
     font-family: ${({ theme }) => theme.titles};
     color: ${({ theme }) => theme.tertiary};
     margin: 0.5rem;
-    ;
   }
-  p{margin:0.5rem;}
-  @media screen and (max-width:900px){
-
-
-    flex-direction:column ;
+  p {
+    margin: 0.5rem;
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
   }
 `;
 export const TextContent = styled.div`

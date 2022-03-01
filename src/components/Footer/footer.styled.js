@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {
   contactIcons,
   emmailAnimIn,
-  Transition,
   emmailAnimOut,
 } from "../../themeAndGlobalStyles/ThemeProvider";
 
@@ -28,11 +27,12 @@ export const SvgContainer = styled.div`
   height: 100%;
   margin: auto;
 
-  a {
+  button {
     width: 50px;
     height: 50px;
     text-decoration: none;
-    color: white;
+    background-color: transparent;
+    border: transparent;
     div {
       text-align: center;
       position: relative;

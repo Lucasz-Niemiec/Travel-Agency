@@ -7,12 +7,6 @@ const {
   addDays,
 } = require("date-fns");
 
-const selectedDate = new Date();
-
-const startDate = startOfWeek(startOfMonth(selectedDate));
-
-const endDate = endOfWeek(endOfMonth(selectedDate));
-
 export function takeWeek(start = new Date()) {
   let date = startOfWeek(startOfDay(start));
 

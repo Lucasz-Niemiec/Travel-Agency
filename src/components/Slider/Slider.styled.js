@@ -4,19 +4,22 @@ import {
   SliderButtons,
 } from "../../themeAndGlobalStyles/ThemeProvider";
 export const MainConatiner = styled.div`
-  margin: auto;
-  display: flex;
-  align-items: center;
   padding: 0.9rem 0;
   margin: auto;
   width: 80%;
+  height: 50rem;
   position: relative;
-  @media screen and (max-width: 520px) {
-    width: 100%;
+  background-color: aliceblue;
+  @media screen and (max-width: 1400px) {
+    width: 90%;
+    height: 100%;
+    padding: 0;
   }
 `;
 export const SliderContainer = styled.div`
   width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -24,27 +27,26 @@ export const SliderContainer = styled.div`
   justify-content: flex-start;
   flex-wrap: nowrap;
   overflow: hidden;
-  @media screen and (max-width: 820px) {
+  position: relative;
+  @media screen and (max-width: 1400px) {
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-  }
-  @media screen and (max-width: 520px) {
-    width: 100%;
+    align-items: center;
+    width: 90%;
+    padding: 0;
   }
 `;
 export const Slide = styled.div`
   margin: 0 40px;
-  min-width: 400px;
-  height: 500px;
+  min-width: 700px;
+  height: 100%;
   transform: translateX(50px);
   box-shadow: -2px 5px 5px #1d1f1e;
-  @media screen and (max-width: 820px) {
-    margin: 0.5rem auto;
+  @media screen and (max-width: 1400px) {
+    margin: 10rem auto;
     max-width: 100px;
-    height: 400px;
-    transform: translateX(0px);
+    height: 800px;
+    transform: translateX(-10px);
   }
   @media screen and (max-width: 520px) {
     min-width: 90%;
@@ -58,7 +60,7 @@ export const Controllers = styled.div`
   pointer-events: none;
   height: 100%;
   opacity: 1;
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 1400px) {
     visibility: hidden;
   }
 `;
