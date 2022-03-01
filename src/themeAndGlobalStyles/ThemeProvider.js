@@ -117,6 +117,7 @@ export const svg = css`
   width: 5%;
   ${Transition};
   margin: 50px;
+  width: 50;
 
   :hover {
     background-color: ${({ theme }) => theme.tertiary};
