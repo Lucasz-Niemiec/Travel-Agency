@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useFecthDestinations = () => {
-  const API_URL = `https://destinationsapi.herokuapp.com//destinations`;
+  const API_URL = `https://destinationsapi.herokuapp.com/destinations`;
 
   const [destinations, setDestinations] = useState([]);
   const [fetchError, seFetchError] = useState(null);
